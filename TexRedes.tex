@@ -1,0 +1,103 @@
+\documentclass[]{article}
+
+\title{Introducción a Packet Tracer}
+\author{Lautaro Ricci}
+
+\begin{document}
+	
+	\maketitle
+
+\section{Packet Tracer}
+	\subsection{Introducción}
+	En Cisco Packet Tracer podemos encontrar una amplia variedad de dispositivos para ser conectados entre sí y realizar nuestros modelos de redes, como switches, pcs, routers, servers, printers, telefonos voip, etc, para pruebas y evaluaciones.
+	\subsection{Herramientas básicas}
+	Cisco Packet Tracer proporciona accesos directos a funciones como guardar, abrir y ajustar configuraciones, mientras que el entorno de trabajo permite construir y visualizar redes utilizando dispositivos como routers, switches, PCs, servidores e impresoras. El menú de dispositivos ofrece una lista completa de componentes para modelar redes, y las pruebas de escenarios permiten observar y analizar el flujo de mensajes y su éxito o fallo. Además, los modos de operación permiten trabajar en RealTime para ver el movimiento de paquetes en tiempo real, o en Simulation para controlar el intercambio de paquetes.	
+	\\
+	\subsection{Modos de Operación}	
+	Hay dos modos de operacion, el modo real, en donde se crean las configuraciones y la posición de los dispositivos, y el modo simulación en el cual se pone a andar las redes armadas. Se puede cambiar entre los diferentes modos, esto está en la parte inferior derecha. El modo real (Realtime) es representado por un reloj, y el modo simulación (Simulation) es representado con un cronometro. Luego, existen dos vistas, una es la lógica en donde se construye la red sin tener en cuenta las limitaciones de longitudes o construcciones, y la física en la cual se tiene en cuenta como afecta las construcciones a la longitud de los cableados.
+\\
+\\	 
+\section{Dispositivos Finales}
+\subsection{PC}
+La \textbf{PC} es un dispositivo de red que representa una computadora de escritorio típica. Se utiliza para ejecutar aplicaciones, navegar por la web, enviar correos electrónicos, y realizar otras tareas informáticas comunes. En Packet Tracer, puedes configurar su dirección IP, conectar a otras redes, y realizar pruebas de conectividad.
+
+\subsection{Laptop}
+La \textbf{Laptop} representa una computadora portátil en la red. Similar a la PC, pero con la portabilidad de una laptop.
+
+\subsection{Server}
+El \textbf{Servidor} es un dispositivo que ofrece diversos servicios a otros dispositivos en la red, como servidores web (HTTP), servidores de archivos, servidores de correos electrónicos, o bases de datos.
+
+\subsection{Printer}
+La \textbf{Impresora} representa una impresora en la red. Se utiliza para imprimir documentos desde otros dispositivos de la red.
+
+\subsection{Conexiones}
+Dichos dispositivos se conectan mediante diferentes tipos de conexiones, como automáticas, de punto a punto, cruzadas, consola, fibra óptica, teléfono, USB, Serial DCE y Serial DTE.
+
+\section{Dispositivos de Red}
+	\subsection{Hub}
+	El \textbf{Hub} es un dispositivo de red que recibe una señal en uno de sus puertos, amplifica la señal y la envia a todos los demas puertos. Debido a que el Hub envia la señal a todos los dispositivos podria ocasionar una colisión y reducir la frecuencia de la señal. No posee opciones de configuración avanzadas o módulos de ampliación.
+
+
+\subsection{Switch}
+El \textbf{Switch} es un aparato muy semejante al hub, pero envía los datos de manera diferente. A través de un switch aquella información proveniente del ordenador de origen es enviada al ordenador de destino.
+Básicamente, los switchs crean una especie de canal de comunicación exclusiva entre el origen y el destino. Así la red no queda "limitada" a un solo equipo en el envío de información, a diferencia del hub. Las opciones de configuración avanzadas o módulos de ampliación no pueden ser configuradas y vienen dadas por el software.
+
+\subsection{Router}
+El router es el dispositivo que se encarga de reenviar los paquetes entre distintas redes. Es más "inteligente" que el switch, ya que, además de cumplir con la misma función, tiene además la capacidad de escoger la mejor ruta para que un determinado paquete de datos llegue a su destino. Los routers son capaces de interconectar varias redes y generalmente trabajan en conjunto con hubs y switchs. Suelen poseer recursos extras, como firewalls, por ejemplo.
+
+\section{Cableado}
+
+\subsection{Automatically Choose Connection Type}
+	Se utiliza para cablear automáticamente dispositivos de red. Puedes usar esta opción si no sabes qué cable usar para conectar un Router Cisco.
+	
+\subsection{Console}
+La conexión de consola es el tipo de conexión entre la interfaz Serial/USB de una computadora o portátil y la interfaz de consola del Router o Switch. La conexión de consola se utiliza para la configuración inicial.
+
+\subsection{Copper Straight-Through}
+Conecta dispositivos de red que operan en diferentes capas en los modelos de red OSI o TCP. Por ejemplo; PC-Switch, Router-Switch.
+
+\subsection{Copper Cross-Over}
+Conecta dispositivos de red que operan en las mismas capas en los modelos de red OSI o TCP. Por ejemplo; PC-PC, Switch-Switch, Router-Router, PC-Router.
+
+\subsection{Fiber}
+Los cables de fibra óptica, que ofrecen alta velocidad en la transmisión de datos, transmiten datos como luz. Se pueden utilizar en conexiones que requieren una alta velocidad de transmisión de datos.
+
+\subsection{Phone}
+Se utiliza para la conexión de dispositivos como módems o teléfonos.
+
+\subsection{Coaxial}
+Es el tipo de cable utilizado en topologías de red antiguas. Hoy en día se utiliza en transmisiones de televisión por cable.
+
+\subsection{Octal}
+El cable Octal es un conector de 68 pines en un extremo. Se puede utilizar para crear un servidor de terminales o de acceso.
+
+\subsection{IoE Custom Cable}
+Este tipo de cable fue desarrollado para soluciones de hogares inteligentes.
+
+\subsection{USB}
+Es un cable USB que conecta dispositivos con una interfaz USB.
+\\
+\\
+\begin{center}
+	\textbf{{\LARGE PRÁCTICA}}
+\end{center}
+
+\begin{center}
+	{\tiny \section*{Interconexión de dos PC}}
+\end{center}
+
+Primero se deben colocar dos PC's en el area de trabajo, luego interconectarlos mediante una conexión cruzada (Copper Cross-Over) a través del puerto Ethernet. Colocar en cada uno de los PC, una "IPv4" adress y una "SubnetMask", por ejemplo: 
+\\
+\textit{\textbf{PC 1:}} IPv4: 192.168.2.1 -- SubnetMask: 255.255.255.0
+\\
+\textit{\textbf{PC 2:}} IPv4: 192.168.2.2 -- SubnetMask: 255.255.255.0
+\\
+Se realiza, a traves del "CommandPrompt", el ping entre las dos PC's las cuales deberían devolver 4 paquetes enviados y 4 paquetes recibidos con 0 paquetes perdidos.
+
+\begin{center}
+	{\tiny \section*{Limitaciones}}
+\begin{flushleft}
+		Las limitaciones de esta interconexión, sin ningún switch, hub o router, son principalmente la incapacidad de poder conectar a la red más allá de dos dispositivos, y la falta de gestión eficiente del tráfico, ya que la conexión directa entre PCs no permite experimentar con la segmentación, el control de tráfico, o la prevención de colisiones que proporcionan estos equipos de red adicionales.
+\end{flushleft}	
+\end{center}
+\end{document}
